@@ -62,6 +62,10 @@ This provides the same authentication functionality but is derived from
 `LocalAuthenticator` and therefore provides features such as the ability
 to add local accounts through the admin interface if configured to do so.
 
+To set the HTTP header name:
+  
+    c.RemoteUserLocalAuthenticator.header_name = 'X-Remote-User'
+
 .. [#f1] The HTTP header name is configurable.  Note that NGINX, a popular
    proxy, drops headers that contain an underscore by default. See
    http://nginx.org/en/docs/http/ngx_http_core_module.html#underscores_in_headers
